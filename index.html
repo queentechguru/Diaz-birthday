@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love 💙</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="stars-canvas"></canvas>
+<div class="particles" id="particles"></div>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <span class="lang-divider">|</span>
+  <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+</div>
+
+<div class="wrapper">
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="date-pill" data-en="26 May · A Special Day" data-es="26 de Mayo · Un Día Especial">
+      26 May · A Special Day
+    </div>
+    <h1 class="hero-title">
+      <span class="happy" data-en="Happy Birthday," data-es="¡Feliz Cumpleaños,">Happy Birthday,</span>
+      <span class="name">My Love</span>
+    </h1>
+    <span class="hero-heart">💙</span>
+    <p class="hero-subtitle"
+       data-en="Today the whole world celebrates the day you arrived in it — and made everything brighter, warmer, and more beautiful."
+       data-es="Hoy el mundo entero celebra el día en que llegaste a él — y lo hiciste todo más brillante, más cálido y más hermoso.">
+      Today the whole world celebrates the day you arrived in it — and made everything brighter, warmer, and more beautiful.
+    </p>
+    <div class="scroll-hint">
+      <span class="scroll-label" data-en="Scroll" data-es="Desliza">Scroll</span>
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ═══ MESSAGE ═══ -->
+  <section class="message-section">
+    <div class="container reveal">
+      <div class="section-label" data-en="A message for you" data-es="Un mensaje para ti">A message for you</div>
+      <h2 class="section-title">
+        <span data-en="Words from the " data-es="Palabras desde el ">Words from the </span>
+        <em data-en="heart" data-es="corazón">heart</em>
+      </h2>
+      <div class="message-card">
+        <p class="message-text"
+           data-en="<strong>Happy Birthday, My Love! 🎉</strong><br><br>On this very special day, I want you to know just how much you mean to me and to everyone around you. You bring so much joy, laughter, and love wherever you go — and today is all about celebrating <strong>YOU</strong> and everything that makes you so incredibly wonderful.<br><br>May this year be filled with new adventures, beautiful surprises, endless smiles, and all the happiness your heart can hold. You deserve every single bit of it and so much more.<br><br>Thank you for being exactly who you are. Here's to <strong>you</strong>, today and always. 🥂💙"
+           data-es="<strong>¡Feliz Cumpleaños, Mi Amor! 🎉</strong><br><br>En este día tan especial, quiero que sepas cuánto significas para mí y para todos los que te rodean. Llevas tanta alegría, risas y amor a donde quiera que vayas — y hoy se trata de celebrar a <strong>TI</strong> y todo lo que te hace tan increíblemente maravilloso.<br><br>Que este año esté lleno de nuevas aventuras, sorpresas hermosas, sonrisas infinitas y toda la felicidad que tu corazón pueda contener. Te mereces cada pedacito de eso y mucho más.<br><br>Gracias por ser exactamente quien eres. Por <strong>ti</strong>, hoy y siempre. 🥂💙">
+          <strong>Happy Birthday, Eduardo! 🎉</strong><br><br>
+          On this very special day, I want you to know just how much you mean to me and to everyone around you.
+          You bring so much joy, laughter, and love wherever you go — and today is all about celebrating 
+          <strong>YOU</strong> and everything that makes you so incredibly wonderful.<br><br>
+          May this year be filled with new adventures, beautiful surprises, endless smiles, 
+          and all the happiness your heart can hold. You deserve every single bit of it and so much more.<br><br>
+          Thank you for being exactly who you are. Here's to <strong>you</strong>, today and always. 🥂💙
+        </p>
+        <div class="message-signature"
+             data-en="With all the love 💙"
+             data-es="Con todo el amor 💙">
+          With all the love 💙
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+<section class="video-section reveal">
+
+  <div class="container">
+
+    <div class="section-label"
+         data-en="A special message"
+         data-es="Un mensaje especial">
+      A special message
+    </div>
+
+    <h2 class="section-title"
+        data-en="Just <em>for you</em>"
+        data-es="Solo <em>para ti</em>">
+      Just <em>for you</em>
+    </h2>
+
+    <div class="video-wrapper">
+
+      <!-- VIDEO -->
+      <video
+        id="birthdayVideo"
+        preload="metadata"
+        playsinline
+      >
+        <source src="Birthday--video.mp4" type="video/mp4">
+      </video>
+
+      <!-- OVERLAY -->
+      <div class="video-overlay" id="videoOverlay">
+
+        <div class="play-btn" id="playBtn">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+
+        </div>
+
+      </div>
+      
+      <!-- PLACEHOLDER -->
+      <div class="video-placeholder hidden" id="videoPlaceholder">
+
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4 6h16v12H4z"/>
+        </svg>
+
+        <span>
+          Add your video file — see instructions in the code
+        </span>
+
+      </div>
+
+    </div>
+
+    <p class="video-caption"
+       data-en="🎬 Press play for a special birthday surprise just for Eduardo"
+       data-es="🎬 Presiona play para una sorpresa especial de cumpleaños para Eduardo">
+      🎬 Press play for a special birthday surprise just for Eduardo
+    </p>
+
+  </div>
+
+</section>
+  <script>
+  function playVideo() {
+    const video = document.getElementById("birthdayVideo");
+    const overlay = document.getElementById("videoOverlay");
+    const placeholder = document.getElementById("videoPlaceholder");
+
+    video.play();
+
+    overlay.style.display = "none";
+    placeholder.style.display = "none";
+  }
+</script>
+
+  <!-- ═══ COUNTDOWN ═══ -->
+  <section class="countdown-section">
+    <div class="container reveal">
+      <div class="section-label" data-en="Time" data-es="Tiempo">Time</div>
+      <h2 class="section-title">
+        <span data-en="Counting down to " data-es="Cuenta regresiva al ">Counting down to </span>
+        <em data-en="May 26th" data-es="26 de Mayo">May 26th</em>
+      </h2>
+      <div class="countdown-grid" id="countdownGrid">
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-days">--</span>
+          <span class="countdown-label" data-en="Days" data-es="Días">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-hours">--</span>
+          <span class="countdown-label" data-en="Hours" data-es="Horas">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-mins">--</span>
+          <span class="countdown-label" data-en="Minutes" data-es="Minutos">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-secs">--</span>
+          <span class="countdown-label" data-en="Seconds" data-es="Segundos">Seconds</span>
+        </div>
+      </div>
+      <div class="birthday-message-banner" id="birthdayBanner">
+        <span class="big-emoji">🎂</span>
+        <p data-en="Today is Eduardo's Birthday!" data-es="¡Hoy es el cumpleaños de Eduardo!">
+          Today is Eduardo's Birthday!
+        </p>
+        <span class="big-emoji">🎉</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WISHES ═══ -->
+  <section>
+    <div class="container reveal">
+      <div class="section-label" data-en="Birthday wishes" data-es="Deseos de cumpleaños">Birthday wishes</div>
+      <h2 class="section-title">
+        <span data-en="Everything I " data-es="Todo lo que ">Everything I </span>
+        <em data-en="wish for you" data-es="deseo para ti">wish for you</em>
+      </h2>
+      <div class="wishes-grid">
+        <div class="wish-card">
+          <div class="wish-icon">💙</div>
+          <div class="wish-title" data-en="Endless Happiness" data-es="Felicidad Infinita">Endless Happiness</div>
+          <p class="wish-text"
+             data-en="May every morning bring you reasons to smile, and every night remind you how blessed and loved you truly are."
+             data-es="Que cada mañana te traiga razones para sonreír, y cada noche te recuerde cuán bendecido y amado eres.">
+            May every morning bring you reasons to smile, and every night remind you how blessed and loved you truly are.
+          </p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">✨</div>
+          <div class="wish-title" data-en="New Adventures" data-es="Nuevas Aventuras">New Adventures</div>
+          <p class="wish-text"
+             data-en="May this year open doors you never knew existed, leading you to places and moments that take your breath away."
+             data-es="Que este año abra puertas que nunca supiste que existían, llevándote a lugares y momentos que te dejen sin aliento.">
+            May this year open doors you never knew existed, leading you to places and moments that take your breath away.
+          </p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">🌟</div>
+          <div class="wish-title" data-en="Boundless Success" data-es="Éxito Sin Límites">Boundless Success</div>
+          <p class="wish-text"
+             data-en="May everything you work toward come to fruition, and may your dreams grow even bigger than you dared to imagine."
+             data-es="Que todo aquello en lo que trabajes dé frutos, y que tus sueños crezcan aún más de lo que te atreviste a imaginar.">
+            May everything you work toward come to fruition, and may your dreams grow even bigger than you dared to imagine.
+          </p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">🫂</div>
+          <div class="wish-title" data-en="Cherished Love" data-es="Amor Preciado">Cherished Love</div>
+          <p class="wish-text"
+             data-en="May you always be surrounded by the people who lift you up, celebrate you, and love you unconditionally."
+             data-es="Que siempre estés rodeado de personas que te eleven, te celebren y te amen incondicionalmente.">
+            May you always be surrounded by the people who lift you up, celebrate you, and love you unconditionally.
+          </p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">🕊️</div>
+          <div class="wish-title" data-en="Peace of Mind" data-es="Paz Interior">Peace of Mind</div>
+          <p class="wish-text"
+             data-en="May the year ahead be gentle on your heart, bringing clarity, calm, and confidence in everything you do."
+             data-es="Que el año que viene sea gentil con tu corazón, trayendo claridad, calma y confianza en todo lo que hagas.">
+            May the year ahead be gentle on your heart, bringing clarity, calm, and confidence in everything you do.
+          </p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon">🎁</div>
+          <div class="wish-title" data-en="Sweet Surprises" data-es="Dulces Sorpresas">Sweet Surprises</div>
+          <p class="wish-text"
+             data-en="May life surprise you with beautiful moments you didn't see coming — little gifts that make your heart soar."
+             data-es="Que la vida te sorprenda con momentos hermosos que no viste venir — pequeños regalos que hagan volar tu corazón.">
+            May life surprise you with beautiful moments you didn't see coming — little gifts that make your heart soar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <span class="footer-heart">💙</span>
+    <p data-en="Made with love for Eduardo · May 26th"
+       data-es="Hecho con amor para Eduardo · 26 de Mayo">
+      Made with love for Eduardo · May 26th
+    </p>
+  </footer>
+
+</div><!-- /wrapper -->
+
+<script src="script.js"></script>
+</body>
+</html>
